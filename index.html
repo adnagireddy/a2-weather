@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information goes here -->
+    <meta charset="utf-8">
+    <!-- Ensures proper character encoding -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes your page mobile-friendly -->
+    
+    <title>Assignment 2: Weather Visualization by Ananya & Neha</title>
+    <!-- Shows in browser tab -->
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Connects your CSS file -->
+</head>
+<body>
+
+    
+    <div class="container">
+        <!-- Main content container -->
+        <h1 id="heading">Assignment 2: Weather Visualization by Ananya & Neha</h1>
+        <!-- Main heading -->
+    </div>
+
+
+    <div class="controls">
+        <!-- Dropdown Template Below -->
+        <p>A rendering of the weather.csv dataset, exploring average temperature per month in U.S. states and territories in 2017</p>
+        <div class="dropdown_combo">
+            <p>Choose a State: </p> <select id="state_dropdown" class="variable"></select>
+            <!-- Tooltip Template Below -->
+            <div id="tooltip" style="display:none"></div> 
+        </div>
+    </div>
+    <div id="vis"> </div> <!--  Will hold our visualization (SVG) -->
+    <div class="writeup">
+        <h1 id="heading_2">WRITEUP</h1>
+        <p>Our dataset encompasses daily weather measurements across the United States from January to September (our dataset does not include any data beyond September), providing detailed information on weather patterns across various states. For our visualization, we chose to focus on average monthly temperatures by states in the US.</p>   
+        <p>We chose a bar chart as our primary visual encoding because it is able to clearly show the comparisons between monthly temperature data and allows users to simply see trends and differences across months. We used tooltips to allow users to exactly read specific temperature values, enhancing the clarity of the visualization. Additionally, we incorporated dropdown interactions, allowing users to easily switch between states. We also added some visual effects for aesthetic purposes. A step-like visual effect was included to provide a clean transition, making the interaction more engaging and visually appealing. Also for aesthic purposes and to make the graph easy to interpret at first glance, we gave each temperature range a color, cold (0 - 55) as blue, moderate (55 - 80) as green, and hot (80+) as red.</p>
+        <p>Initially, we considered also implementing a map-based visualization to geographically represent temperature variations. However, due to our limited experience from lab sessions and challenges with clear visual representation, we decided against this approach. Considering time constraints, we pivoted to a simpler yet effective bar chart, augmented with interactive elements to maintain clarity and usability. Here is what our map looked like:</p>
+        <img src="images/map.png" alt="Map visualization of temperature data" class="map-image">
+        <p style="font-size: 0.75em; font-weight: bold;"> *The above map was an attempt at displaying temperature data geographically. We faced challenges rendering all the states and could only display a few, which led us to focus on the bar chart approach. (As you can see we had a tooltip as well to see exact values, and the colors would have corresponded to how hot a state is)</p>
+
+        <p>Throughout our development process, both Ananya and Neha evenly split the workload. Neha managed the writeup, tried the initial implementation of the choropleth map, and added the coloring for the bars. Meanwhile, Ananya focused on the initial functionality, like the bar charts, state dropdown and transitions.</p>
+        <p>Collectively, we spent approximately 8 hours on this project, with the most time-consuming aspect being the map (that we weren't able to get right :( ), and integration of interactive elements such as state selection dropdowns and smooth visual transitions. In terms of AI usage, we tried to minimize it as much as possible to learn from this project, but  we used Chat GPT when calculating temperature averages and storing them efficiently within dictionary objects because of difficulty with the JavaScript syntax</p>
+    </div>
+    <!-- Load libraries before your code -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- visual element libraries -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>

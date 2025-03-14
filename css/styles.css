@@ -1,0 +1,40 @@
+
+p{
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+#dropdown_combo {
+    display: inline-block;
+    align-items: center;
+    gap: 10px; 
+}
+
+#vis svg {
+    margin: 2rem 0;
+    border: 1px solid #ccc; /*otherwise you can't see this part*/
+    font-family: Helvetica, sans-serif;
+}
+
+#heading {
+    font-family: Helvetica, sans-serif;
+}
+
+
+#tooltip {
+    position: absolute; /* So we can move it with the cursor */
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+}
+
+.map-image {
+    width: 80%; 
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+}
